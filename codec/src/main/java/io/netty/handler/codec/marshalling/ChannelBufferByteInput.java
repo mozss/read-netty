@@ -43,6 +43,7 @@ class ChannelBufferByteInput implements ByteInput {
 
     @Override
     public int read() throws IOException {
+        
         if (buffer.isReadable()) {
             return buffer.readByte() & 0xff;
         }
